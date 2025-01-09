@@ -1,11 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React from "react";
-
+import { TouchableOpacity } from "react-native";
+import { router } from "expo-router";
 const index = () => {
   return (
-    <View>
-      <Text>index</Text>
-    </View>
+    <SafeAreaView>
+      <TouchableOpacity onPress={() => router.replace("/auth/sign-in")}>
+        <Text>index</Text>
+      </TouchableOpacity>
+    </SafeAreaView>
   );
 };
 
